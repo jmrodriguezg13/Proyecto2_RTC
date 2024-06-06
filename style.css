@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+:root {
+    /* FONTS */
+    --primary-font:  'Roboto', sans-serif;
+  
+  
+    /* BRANDING COLORS */
+    --color-1: #FFFFFF;
+    --color-2: #F7F7F7;
+    --color-3: #000000;
+  
+    /* BACKGROUND-COLORS */
+    --primary-bg: var(--color-1);
+    --secondary-bg: var(--color-2);
+  
+    /* TEXT-COLORS */
+    --primary-text: var(--color-3);
+    --secondary-text: var(--color-2);
+   
+    /* SPACINGS */
+    --margin-xs: 10px;
+    --margin-s: 20px;
+    --margin-m: 30px;
+    --margin-l: 40px;
+    --margin-xl: 50px;
+    --margin-section: 100px;
+  
+    --padding-xs: 10px;
+    --padding-s: 20px;
+    --padding-m: 30px;
+    --padding-l: 40px;
+    --padding-xl: 50px;
+  
+    --gap-xs: 10px;
+    --gap-s: 20px;
+    --gap-m: 30px;
+    --gap-l: 40px;
+    --gap-xl: 50px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  p,
+  label,
+  button,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--primary-text);
+  }
+
+
+
+header {
+  width: 100%;
+  height: 200px;
+}
+
+.sectionAyuda {
+  width: 100%;
+  height: 15%;
+  background-color: var(--secondary-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items:center ;
+}
+
+.sectionAyuda > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 150px;  
+  gap: 20px;
+}
+.sectionAyuda > div > a {
+  height: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+ 
+}
+.sectionAyuda > div > a > img {
+  height: 70%;
+}
+
+.sectionAyuda > div > a > img:hover {
+opacity: 50%;
+}
+
+.sectionAyuda > ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gap-xs);
+  padding-right: var(--padding-l);
+}
+
+.sectionAyuda > ul > li {
+  border-right: 1px solid black;
+  padding-right: 8px;
+  font-size: 10px;
+}
+
+.sectionAyuda > ul > li:hover {
+  opacity: 60%;
+}
+
+.sectionLogo {
+  width: 100%;
+  height: 35%;
+  background-color: var(--primary-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container {
+  width: 20%;
+  height: 100%;
+ 
+}
+.logo_container > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_container > a > img {
+  height: 50%;
+}
+.logo_container > a > img:hover {
+  opacity: 50%;
+  }
+
+.nav_container {
+width: 60%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+}
+
+.nav_container > nav > ul {
+  display: flex;
+  align-items:center;
+  gap: var(--gap-l);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.nav_container > nav > ul > li {
+  display: flex;
+  align-items:center;
+  height: 50px;
+
+}
+
+.nav_container > nav > ul >li:hover {
+  border-bottom: 2px solid black;
+}
+
+.buscar_container {
+width: 40%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: var(--gap-xs);
+padding-right: var(--padding-s);
+}
+
+.buscar_container > input {
+  border-radius: 40px;
+  height: 40px;
+  width: 180px;
+  border: none;
+  background-color: var(--secondary-bg);
+  padding: var(--padding-xs);
+}
+
+.buscar_container > input:hover {
+  background-color: #e0dfdf;
+}
+
+.boton_favorito , .boton_cesta, .btn-hamburguesa  {
+height: 40px;
+width: 40px;
+background: none;
+border: none;
+border-radius: 100%;
+cursor: pointer;
+}
+
+
+.boton_busqueda {
+  border-radius: 40px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  border: none;
+  background: var(--color-1);
+  margin-right: -40px;
+  z-index: 1;
+}
+
+.boton_busqueda > img {
+  width: 80%;
+  object-fit: cover;
+  filter: url(#remove-white);
+}
+
+.buscar_container > button:hover {
+  background-color: #e0dfdf;
+}
+
+
+.boton_favorito > img {
+  height: 80%;
+  width: 80%;
+
+}
+
+.boton_cesta > img {
+  height: 80%;
+  width: 80%;
+}
+
+.btn-hamburguesa > img {
+  height: 80%;
+  width: 80%;
+  display: none;
+}
+
+.sectionDevoluciones {
+  height: 50%;
+  background-color: var(--secondary-bg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-m);
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #e0dfdf;
+  
+}
+
+.sectionDevoluciones > button {
+  border: none;
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.carrusel-container {
+  width: 500px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel {
+  width: 500px;
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  flex-shrink: 0;
+}
+
+
+.button {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+#section-contador {
+width: 100%;
+height: 70px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: var(--gap-xs);
+}
+
+.contador-container {
+  width: 75%;
+  
+}
+.btn-filtros{
+  background: none;
+  width: 140px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.btn-filtros > img {
+  width: 25px;
+}
+.btn-ordenar{
+  width: 140px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: var(--gap-xs);
+
+}
+.btn-ordenar > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.btn-ordenar > div > img {
+  width: 25px;
+}
+
+.btn-ordenar > ul {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  text-align: end;
+background-color: var(--primary-bg);
+border-radius: 10px;
+padding: var(--padding-xs);
+width: 140px;
+}
+
+.btn-ordenar > ul > li {
+  cursor: pointer;
+}
+
+.btn-ordenar > ul > li:hover {
+  opacity: 60%;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+#filter {
+  width: 25%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--margin-xs);
+  transition: width 1s ease;
+  overflow: hidden;
+}
+
+.filter-hide {
+  width: 0%;
+}
+
+#escaparate {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap-l);
+  padding: var(--gap-m);
+
+}
+
+#escaparate  > article {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#escaparate  > article > img {
+  width: 100%;
+}
+
+#escaparate  > article > p, h4 {
+  font-weight: 400;
+}
+
+#escaparate  > article > p:first-of-type {
+  color: green;
+}
+
+#escaparate  > article > p:nth-of-type(2), p:nth-of-type(3) {
+  color: var(--color-3);
+  opacity: 40%;
+}
+
+#escaparate  > article > p:last-of-type  {
+  font-size: 18px;
+}
+
+.colores-precio {
+  display: none;
+  width: 200px;
+  height: 40px;  
+}
+
+.article-hovered h4,
+.article-hovered p {
+  display: none;
+}
+
+
+
+.article-hovered .colores-precio , p:last-of-type {
+  display: flex;
+}
+
+
+
+.color-option {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.color-option img {
+  width: 100%;
+  height: auto;
+}
+
+.color-option:hover {
+  border-color: #333;
+}
+
+#filter > label  {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--padding-l);
+  width: 80%;
+  gap: var(--gap-xs);
+  font-weight: 500;
+}
+
+#filtroDeporte {
+  border-radius: 20px;
+  padding: var(--padding-xs);
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#filtroPrecio {
+  border-radius: 20px;
+  padding: var(--padding-xs);
+  border: 1px solid black;
+}
+
+#filter > label > button {
+  border-radius: 20px;
+  padding: var(--padding-xs);
+  background: black;
+  color: white;
+  margin-top: var(--margin-m);
+  cursor: pointer;
+  border-style: none;
+}
+
+#filter > button {
+  border-radius: 20px;
+  border: 1px solid black;
+  background: none;
+  padding: var(--padding-xs);
+  margin-top: var(--margin-xs);
+  width: 80%;
+  cursor: pointer;
+}
+
+#sectionNoProductos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap-l);
+  padding: var(--gap-m);
+ 
+}
+
+#sectionNoProductos > h5 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#sectionNoProductos > button {
+border-radius: 50px;
+padding: var(--padding-xs) 14px;
+border: none;
+background: var(--color-3);
+color: var(--color-1);
+font-weight: 500;
+cursor: pointer;
+}
+
+#divSugeridos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap-l);
+  padding: var(--gap-m);
+}
+
+#divSugeridos > article {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#divSugeridos  > article > img {
+  width: 100%;
+}
+
+#divSugeridos  > article > p, h4 {
+  font-weight: 400;
+}
+
+#divSugeridos  > article > p:first-of-type {
+  color: green;
+}
+
+#divSugeridos  > article > p:nth-of-type(2), p:nth-of-type(3) {
+  color: var(--color-3);
+  opacity: 40%;
+}
+
+#divSugeridos  > article > p:last-of-type  {
+  font-size: 18px;
+}
+
+footer {
+  width: 100%;
+}
+
+#footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 350px;
+  margin-top: var(--margin-m);
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-2);
+
+}
+
+.footer-section {
+  width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: var(--margin-s);
+}
+
+.footer-section ul li {
+margin-bottom: var(--margin-xs);}
+
+.footer-section ul li a {
+  opacity: 50%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 430px) {
+  header {
+    height: 150px;
+  }
+ .sectionAyuda {
+  display: none;
+ }
+ .sectionLogo{
+  height: 45px;
+  padding: var(--padding-xs);
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .logo_container {
+  width: 60px;
+  height: 60px;
+ }
+
+ .logo_container > a > img {
+    width: 45px;
+    height: 20px;
+ }
+
+ .nav_container {
+  display: none;
+ }
+
+ .buscar_container > input {
+  display: none;
+ }
+ .buscar_container {
+  align-items: center;
+  gap: 0px;
+ }
+
+ .buscar_container > button {
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+ }
+  
+  .boton_busqueda {
+    margin-right: 0;
+  }
+
+  .boton_busqueda > img {
+    width: 100%;
+  }
+  .btn-hamburguesa > img {
+    height: 70%;
+    width: 70%;
+    display: block;
+  }
+  .sectionDevoluciones > button {
+   display: none;
+  }
+  
+  .carrusel-container {
+    width: 90%;
+    height: 100%;
+  }
+   
+  .carrusel {
+    width: 100%;
+  }
+  
+  .slide {
+    width: 100%;
+  }
+
+  .slide > h3 {
+    font-size: 14px;
+  }
+
+  .slide > div > p, a {
+font-size: 12px; 
+}
+ 
+#section-contador {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  padding: var(--padding-s);
+  }
+  
+  .contador-container {
+    width: 60%;
+  }
+  .contador-container > h2 {
+    font-size: 14px;
+  }
+  .btn-filtros{
+    width: 100px;
+    font-size: 10px;
+  }
+  
+  .btn-ordenar{
+    width: 100px;
+    font-size: 10px;
+  
+  }
+  
+  .btn-ordenar > ul {
+    top: 20px;
+  width: 100px;
+  }
+  
+  .btn-ordenar > ul > li > a {
+    font-size: 10px;
+  }
+  
+  #filter {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-left: var(--margin-s);
+    transition: height 1s ease;
+    overflow: hidden;
+    gap: var(--gap-s);
+  }
+  
+  .filter-hide {
+    height: 0%;
+  }
+  
+  #filter > label  {
+    display: flex;
+    padding-top: 0;
+    width: 80px;
+    height: 80px;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 10px;
+  }
+  
+  #filtroDeporte {
+    border-radius: 10px;
+    height: 10px;
+    padding: var(--padding-xs);
+  }
+  
+  #filtroPrecio {
+    border-radius: 10px;
+    height: 10px;
+    padding: var(--padding-xs);
+    border: 1px solid black;
+  }
+  
+  #filter > label > button {
+    margin-top: 0px;
+    height: 10px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #filter > button {
+    border-radius: 20px;
+    padding: var(--padding-xs);
+    margin-top: var(--margin-s);
+    width: 90px;
+    height: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #escaparate {
+    width: 100%;
+    gap: var(--gap-xs);
+    padding: var(--gap-s);
+  }
+  
+  #escaparate  > article {
+    width: 45%;
+    height: 250px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  #escaparate  > article > img {
+    width: 100%;
+  }
+  
+  #escaparate  > article > p, h4 {
+    font-size: 12px;
+  }
+  
+  #escaparate  > article > p:last-of-type  {
+    font-size: 14px;
+  }
+  
+  .colores-precio {
+    display: none;
+    width: 100%;
+    height: 25px; 
+  }
+  
+  .color-option {
+    width: 25px;
+    height: 25px;
+  }
+
+  
+  #sectionNoProductos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xs);
+    padding: var(--gap-m);   
+  }
+  
+  #sectionNoProductos > h5 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  #sectionNoProductos > button {
+  height: 20px;
+  width: 20px;
+  padding: 0px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  font-size: 10px;
+  }
+  
+  
+  
+  #divSugeridos > article {
+    width: 45%;
+    height: 250px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  #divSugeridos  > article > p, h4 {
+    font-size: 12px;
+  }
+  
+  #divSugeridos  > article > p:last-of-type  {
+    font-size: 14px;
+  }
+
+  
+  .footer-section {
+    width: 100px;
+    margin: 5px;
+  }
+  
+  .footer-section h3 {
+    font-size: 10px;
+    margin-bottom: 0;
+  }
+  
+  .footer-section ul li {
+  margin-bottom: 0;
+}
+  
+  .footer-section ul li a {
+    font-size: 10px;
+  }
+}
